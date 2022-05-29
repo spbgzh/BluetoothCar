@@ -365,9 +365,9 @@ static void MX_TIM1_Init(void);
 //改变这里的数值调整输出电压
 enum speed{
 	stop = 0,
-	slow = 200,
-	medium = 500,
-	fast = 1000
+	slow = 83,
+	medium = 88,
+	fast = 110
 };
 
 enum speed leftSpeed = stop;
@@ -378,23 +378,23 @@ uint8_t rightDirction = 1;
 
 void SpeedController()
 {
-	if(leftDirction == 1){
-		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, 0);
-		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, 1);
-	}
-	else if(leftDirction == 0){
+	if(leftDirction == 0){
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, 1);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, 0);
+	}
+	else if(leftDirction == 1){
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, 0);
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, 1);
 	}
 	else{
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, 0);
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, 0);
 	}
-	if(rightDirction == 1){
+	if(rightDirction == 0){
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, 0);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 1);
 	}
-	else if(rightDirction == 0){
+	else if(rightDirction == 1){
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, 1);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, 0);
 	}
