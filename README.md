@@ -15,6 +15,8 @@ App Development: Bluetooth Protocol, UI Kit
 
 **See the doc folder for details**
 
+The next stage of the project is to use the EEG to control the car via bluetooth  
+
 ## Contributor
 
 Guo ZiHan  
