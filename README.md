@@ -20,7 +20,7 @@ The next stage of the project is to use the EEG to control the car via bluetooth
 ## Contributor
 
 Guo ZiHan  
-![](https://img.shields.io/badge/VK-zjjhgzh-green)  
+![](https://img.shields.io/badge/VK-zjjhgzh-green) 
 ![](https://img.shields.io/badge/mail-zjjhgzh%40gmail.com-blue)  
 Liao Yihong  
 ![](https://img.shields.io/badge/VK-id564725057-green)  
